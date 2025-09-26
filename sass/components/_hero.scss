@@ -2,116 +2,19 @@
 @use 'sass:color';
 
 .hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 20px;
-  max-width: abs.$bp-desktop;
-  margin: 0 auto;
-
+  
   &__content {
-    flex: 1;
-    padding: 0 40px 0 56px;
-
-
+    margin-bottom: 80px;
+    
     h1 {
-      font-size: 3rem;
+      font-family: abs.$secondary-font;
       font-weight: 700;
-      color: #fff;
-      margin-bottom: 20px;
-      line-height: 1.2;
-      font-family: abs.$primary-font;
+      letter-spacing: -0.05em;
+      font-size: 50px;
     }
 
     p {
-      font-size: 1.1rem;
-      color: color.adjust(abs.$dark-grey, $lightness: 40%);
       margin-bottom: 30px;
-      line-height: 1.5;
-    }
-  }
-
-  &__stats {
-    display: flex;
-    gap: 30px;
-    
-    .stat {
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.3s ease;
-      &:hover {
-        transform: scale(1.05);
-      }
-
-      img {
-        width: 40px;
-        height: 40px;
-        margin-bottom: 10px;
-        background-color: rgb(255, 255, 255, 0.2);
-        padding: 8px;
-        border-radius: 10px;
-      }
-
-      & p {
-        font-size: 0.9rem;
-        color: #fff;
-        margin: 0;
-        padding: 0 0 0 10px;
-      }
-    }
-  }
-
-  &__images {
-    flex: 1;
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto); 
-    grid-gap: 10px;
-    max-width: 500px;
-    position: relative; 
-  
-    img {
-      width: 150px; 
-      height: auto;
-      border-radius: 50px;
-      object-fit: cover;
-      position: absolute;
-      transition: transform 0.3s ease;
-      &:hover {
-        transform: scale(1.05);
-      }
-    }
-  
-    img:nth-child(1) { 
-      top: -200px;
-      left: 0;
-      background-color: abs.$purple;
-    }
-    
-    img:nth-child(2) {
-      top: -200px;
-      left: 160px;
-      background-color: abs.$cyan;
-    }
-    
-    img:nth-child(3) { 
-      top: -123px;
-      left: 320px;
-      background-color: abs.$yellow;
-    }
-    
-    img:nth-child(4) { 
-      top: -27px;
-      left: 160px;
-      background-color: abs.$orange;
-    }
-    
-    img:nth-child(5) { 
-      top: 140px;
-      left: 0;
-      background-color: abs.$pink;
     }
   }
 }

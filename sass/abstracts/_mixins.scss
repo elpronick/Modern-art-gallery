@@ -1,31 +1,62 @@
 @use '../abstracts/variables' as *;
 @use 'sass:color';
 
-// INTERFACES--------------------
-@mixin breakpoint($bp) {
-  @if $bp == tablet {
-    @media (min-width: $bp-tablet) {
-      @content;
+// MIXINS--------------------
+@mixin button(
+  $bg-left: $almost-black,
+  $bg-right: $gold,
+  $text-color: #fff,
+  $padding-y: 10px,
+  $padding-x: 20px,
+  $font-size: 16px
+) {
+  display: inline-block;
+  position: relative;
+  padding: $padding-y $padding-x;
+  font-family: $secondary-font;
+  font-size: $font-size;
+  font-weight: 400;
+  color: $text-color;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $bg-left; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 2; 
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 22%; 
+    height: 100%;
+    background-color: $bg-right;
+    z-index: -1; 
+  }
+
+  &:after {
+    content: '';
+    margin-left: 15px;
+    width: 24px;
+    height: 20px;
+    background: url(/img/arrow.svg) no-repeat right;
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  // Hover effect
+  &:hover {
+    background-color: darken($bg-left, 10%); // Solo cambia el fondo izquierdo
+    &:before {
+      background-color: darken($bg-right, 10%); // Cambia el fondo derecho
     }
   }
 
-  @if $bp == tablethorizontal {
-    @media (min-width: $bp-tablet-horizontal) {
-      @content;
-    }
-  }
-
-  @if $bp == desktop {
-    @media (min-width: $bp-desktop) {
-      @content;
-    }
-  }
-
-  @if $bp == desktopxl {
-    @media (min-width: $bp-desktop-xl) {
-      @content;
-    }
+  // Eliminar estilos predeterminados del navegador
+  &:focus {
+    outline: none;
   }
 }
-
-// MIXINS--------------------

@@ -1,3 +1,7 @@
 @use '../abstracts/index' as abs;
 @use 'sass:color';
 
+.button {
+  @include abs.button();
+}
+

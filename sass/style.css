@@ -1,212 +1,74 @@
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 75px;
-  padding-right: 150px;
-  background-color: #2B2D38;
-  color: #fff;
-}
-.header__logo a {
-  text-decoration: none;
-  color: #DB2A6B;
-  font-size: 1.5rem;
-  font-weight: 700;
-  font-family: "Merriweather", sans-serif;
-}
-.header__logo img {
-  transition: transform 0.3s ease;
-}
-.header__logo img:hover {
-  transform: scale(1.05);
-}
-.header__nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-.header__nav ul li {
-  margin-left: 20px;
-}
-.header__nav ul li a {
-  text-decoration: none;
-  color: rgb(166.7575757576, 169.9090909091, 187.2424242424);
-  font-size: 1rem;
-  transition: color 0.3s;
-  position: relative;
-}
-.header__nav ul li a:hover {
-  color: #DB2A6B;
-}
-.header__nav ul li a.active {
-  color: #DB2A6B;
-  border-bottom: 2px solid #DB2A6B;
-}
-.header__nav ul li:nth-child(1) a::before {
-  content: "";
-  position: absolute;
-  bottom: -5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 3px;
-  background-color: #DB2A6B;
-}
-.header__background {
-  position: absolute;
-  top: 180px;
-  right: -79px;
-  width: 600px;
-  height: 550px;
-  background-image: url(/img/ellipse.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
+body {
+  background-color: #fff;
 }
 
-.hero {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
 .hero__content {
-  flex: 1;
-  padding: 0 40px 0 56px;
-}
-.hero__content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 20px;
-  line-height: 1.2;
-  font-family: "Merriweather", sans-serif;
-}
-.hero__content p {
-  font-size: 1.1rem;
-  color: rgb(137.9090909091, 142.0909090909, 165.0909090909);
-  margin-bottom: 30px;
-  line-height: 1.5;
-}
-.hero__stats {
-  display: flex;
-  gap: 30px;
-}
-.hero__stats .stat {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease;
-}
-.hero__stats .stat:hover {
-  transform: scale(1.05);
-}
-.hero__stats .stat img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 8px;
-  border-radius: 10px;
-}
-.hero__stats .stat p {
-  font-size: 0.9rem;
-  color: #fff;
-  margin: 0;
-  padding: 0 0 0 10px;
-}
-.hero__images {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, auto);
-  grid-gap: 10px;
-  max-width: 500px;
-  position: relative;
-}
-.hero__images img {
-  width: 150px;
-  height: auto;
-  border-radius: 50px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  position: absolute;
-  transition: transform 0.3s ease;
-}
-.hero__images img:hover {
-  transform: scale(1.05);
-}
-.hero__images img:nth-child(1) {
-  top: -200px;
-  left: 0;
-  background-color: #6E1FED;
-}
-.hero__images img:nth-child(2) {
-  top: -200px;
-  left: 160px;
-  background-color: #60D3D9;
-}
-.hero__images img:nth-child(3) {
-  top: -123px;
-  left: 320px;
-  background-color: #F4B840;
-}
-.hero__images img:nth-child(4) {
-  top: -27px;
-  left: 160px;
-  background-color: #FF7E29;
-}
-.hero__images img:nth-child(5) {
-  top: 140px;
-  left: 0;
-  background-color: #DB2A6B;
-}
-
-.hero__buttons {
   margin-bottom: 80px;
 }
-.hero__buttons .btn-primary {
+.hero__content h1 {
+  font-family: "Big Shoulders Display Black", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  font-size: 50px;
+}
+.hero__content p {
+  margin-bottom: 30px;
+}
+
+.button {
   display: inline-block;
-  padding: 15px 40px;
-  background-color: #DB2A6B;
+  position: relative;
+  padding: 10px 20px;
+  font-family: "Big Shoulders Display Black", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
   color: #fff;
+  text-transform: uppercase;
   text-decoration: none;
-  border-radius: 10px 10px 10px 0;
-  transition: background-color 0.3s;
+  background-color: #151515;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 2;
 }
-.hero__buttons .btn-primary:hover {
-  background-color: rgb(86.979338843, 16.1404958678, 200.8595041322);
+.button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22%;
+  height: 100%;
+  background-color: #D5966C;
+  z-index: -1;
 }
-.hero__buttons .btn-secondary {
+.button:after {
+  content: "";
+  margin-left: 15px;
+  width: 24px;
+  height: 20px;
+  background: url(/img/arrow.svg) no-repeat right;
+  background-size: contain;
   display: inline-block;
-  padding: 15px 40px;
-  background-color: none;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 10px 10px 10px 0;
-  transition: background-color 0.3s;
-  text-decoration: underline;
-  padding: 5px 40px;
-}
-.hero__buttons .btn-secondary:hover {
-  background-color: rgb(86.979338843, 16.1404958678, 200.8595041322);
-}
-.hero__buttons .btn-secondary img {
   vertical-align: middle;
+}
+.button:hover {
+  background-color: black;
+}
+.button:hover:before {
+  background-color: rgb(201.6666666667, 121.6666666667, 68.3333333333);
+}
+.button:focus {
+  outline: none;
 }
 
 html * {
-  font-family: "Merriweather", sans-serif;
+  font-family: "Outfit Light", sans-serif;
 }
 
 body {
   overflow-x: hidden;
   font-size: 16px;
-  background-color: #2B2D38;
+  background-color: #fff;
 }
 
 img {
