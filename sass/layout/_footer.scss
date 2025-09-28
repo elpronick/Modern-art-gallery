@@ -1,1 +1,35 @@
 @use '../abstracts/index' as abs;
+@use 'sass:color';
+
+
+.footer {
+  color: #fff;
+  position: relative; // Necesario para que ::before se posicione respecto al footer
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 120%;
+    height: 100%;
+    background-color: abs.$almost-black;
+    z-index: -1; // Coloca el fondo detrás del contenido
+  }
+
+  p {
+    padding: 0px 30px 20px 25px;
+    color: #fff;
+  }
+  
+  &__logo {
+    padding: 35px 0 15px 25px;
+    width: 100px;
+  }
+  
+  &__img {
+    display: flex;
+    padding: 0px 0 40px 25px;
+    gap: 15px;
+  }
+}
