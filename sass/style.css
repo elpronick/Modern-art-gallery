@@ -115,6 +115,91 @@ body {
   padding: 0px 30px 40px 20px;
   color: #fff;
 }
+.callout__background {
+  position: relative;
+}
+.callout__background:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 120%;
+  height: 100%;
+  background-color: #151515;
+  z-index: -1;
+}
+
+.callout-2 {
+  margin-bottom: 30px;
+  position: relative;
+  color: #fff;
+}
+.callout-2:before {
+  content: "";
+  position: absolute;
+  top: -25px;
+  left: -10px;
+  width: 120%;
+  height: 150%;
+  background-color: #151515;
+  z-index: -1;
+}
+.callout-2__title {
+  padding: 25px 30px 0 20px;
+  font-family: "Big Shoulders Display Black", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.07em;
+  font-size: 2.2em;
+  text-transform: uppercase;
+}
+.callout-2__title-2 {
+  padding: 10px 30px 0 20px;
+  font-family: "Big Shoulders Display Black", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.07em;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  color: #D5966C;
+}
+.callout-2__table {
+  padding: 0px 30px 5px 20px;
+}
+.callout-2__table p {
+  color: #fff;
+}
+.callout-2__text {
+  padding: 0px 30px 40px 20px;
+  color: #fff;
+}
+
+.footer-2 {
+  position: relative;
+}
+.footer-2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 120%;
+  height: 100%;
+  background-color: #D5966C;
+  z-index: -1;
+}
+.footer-2 p {
+  padding: 0px 30px 20px 25px;
+  color: #151515;
+}
+.footer-2__logo {
+  padding: 35px 0 15px 25px;
+  width: 100px;
+  filter: brightness(0);
+}
+.footer-2__img {
+  display: flex;
+  padding: 0px 0 40px 25px;
+  gap: 15px;
+  filter: brightness(0);
+}
 
 html * {
   font-family: "Outfit Light", sans-serif;

@@ -18,4 +18,19 @@
     padding: 0px 30px 40px 20px;
     color: #fff;
   }
+
+  &__background {
+    position: relative; 
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -10px;
+      width: 120%;
+      height: 100%;
+      background-color: abs.$almost-black;
+      z-index: -1;
+    }
+  }
 }

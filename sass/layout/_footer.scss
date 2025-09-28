@@ -4,7 +4,7 @@
 
 .footer {
   color: #fff;
-  position: relative; // Necesario para que ::before se posicione respecto al footer
+  position: relative; 
 
   &:before {
     content: '';
@@ -14,9 +14,9 @@
     width: 120%;
     height: 100%;
     background-color: abs.$almost-black;
-    z-index: -1; // Coloca el fondo detrás del contenido
+    z-index: -1; 
   }
-
+  
   p {
     padding: 0px 30px 20px 25px;
     color: #fff;
@@ -33,3 +33,4 @@
     gap: 15px;
   }
 }
+
