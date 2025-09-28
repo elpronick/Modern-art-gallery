@@ -1,8 +1,8 @@
 // ============ POR DEFECTO ================
-@use '../abstracts/index' as abs;
+@use '../abstracts/index' as *;
 
 html * {
-  font-family: abs.$primary-font;
+  font-family: $primary-font;
 }
 
 body {
@@ -13,4 +13,8 @@ body {
 
 img {
   max-width: 100%;
+}
+
+p {
+  color: $dark-grey ;
 }
