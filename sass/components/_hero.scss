@@ -50,39 +50,71 @@
       background-position: -20px top; // Alinea la imagen desde la parte superior izquierda
       background-repeat: no-repeat;
       position: relative;
-      min-height: 700px; // Asegura que el contenedor tenga al menos 700px de alto
+      min-height: 700px; 
       margin-bottom: 0;
 
       img {
-        display: none; // Oculta la imagen móvil
+        display: none;
       }
     }
 
     &__experience {
       display: grid;
-      grid-template-columns: 1fr 1fr; // 3 columnas de igual ancho
-      grid-template-rows: auto auto auto; // 3 filas automáticas
-      gap: 20px; // Espaciado entre celdas
-      padding: 30px;
+      grid-template-columns: 1fr 1fr; 
+      grid-template-rows: auto auto auto; 
+      gap: 10px; 
+      padding: 15px;
 
       .hero__experience__text {
-        grid-column: 1 / 2; // Texto en la primera columna
-        grid-row: 1 / 2; // Ocupa las primeras dos filas
+        grid-column: 1 / 2; 
+        grid-row: 1 / 2;
+        h2 {
+          padding-right: 180px;
+        }
+        p {
+          padding-right: 120px;
+        }
       }
 
       img:nth-child(2) { // Primera imagen (image-2-mobile.jpg)
         grid-column: 2 / 3;
         grid-row: 1 / 2;
+        width: 100%;
+        height: 100%; 
+        object-fit: cover; // Ajusta la imagen sin distorsión
+        justify-self: start; // Desplaza hacia la izquierda
       }
 
       img:nth-child(3) { // Segunda imagen (image-3-mobile.jpg)
         grid-column: 1 / 2;
-        grid-row: 2 / span 3;
+        grid-row: 2 / 4; 
+        width: 100%; // Llena el ancho
+        height: 100%; // Llena la altura
+        object-fit: cover; // Cubre la celda
+        justify-self: end; // Desplaza hacia la derecha
       }
 
       img:nth-child(4) { // Tercera imagen (image-4-mobile.jpg)
         grid-column: 2 / 3;
-        grid-row: 2 / 3; // Ocupa dos filas
+        grid-row: 2 / 3; 
+        width: 100%;
+        height: 100%; 
+        object-fit: cover;
+      }
+
+      .callout {
+        grid-column: 2 / 3; 
+        grid-row: 3 / 4; 
+        width: 100%;
+        height: 100%; 
+        &__text {
+          margin: 0;
+          padding: 25px 30px 0 20px;
+        }
+        &__title {
+          padding: 55px 30px 0 20px;
+          margin: 0;
+        }
       }
     }
   }
