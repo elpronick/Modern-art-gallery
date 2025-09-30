@@ -2,6 +2,7 @@
 @use 'sass:color';
 
 .hero {
+  position: relative; // Asegura que el contenedor maneje el fondo
   
   &__content {
     margin-bottom: 80px;
@@ -9,17 +10,22 @@
     &__title {
       font-family: abs.$secondary-font;
       font-weight: 700;
-      letter-spacing: -0.05em;
+      letter-spacing: -0.07em; // Alineado con h2
       font-size: 2.8em;
     }
 
     &__text {
       margin-bottom: 30px;
     }
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   }
   
   &__experience {
-
     h2 {
       font-family: abs.$secondary-font;
       font-weight: 700;
@@ -33,11 +39,51 @@
     }
   }
 }
+
 // ============ TABLET ================
-@include abs.breakpoint(tablet){
+@include abs.breakpoint(tablet) {
   .hero {
-    display: none;
+    &__content {
+      padding: 80px 30px 0px 50%; // Espacio para la imagen a la izquierda
+      background-image: url('/img/image-1.jpg'); // Usamos una sola imagen
+      background-size: auto 650px; // Fija la altura a 700px, ancho ajustable
+      background-position: -20px top; // Alinea la imagen desde la parte superior izquierda
+      background-repeat: no-repeat;
+      position: relative;
+      min-height: 700px; // Asegura que el contenedor tenga al menos 700px de alto
+      margin-bottom: 0;
+
+      img {
+        display: none; // Oculta la imagen móvil
+      }
+    }
+
+    &__experience {
+      display: grid;
+      grid-template-columns: 1fr 1fr; // 3 columnas de igual ancho
+      grid-template-rows: auto auto auto; // 3 filas automáticas
+      gap: 20px; // Espaciado entre celdas
+      padding: 30px;
+
+      .hero__experience__text {
+        grid-column: 1 / 2; // Texto en la primera columna
+        grid-row: 1 / 2; // Ocupa las primeras dos filas
+      }
+
+      img:nth-child(2) { // Primera imagen (image-2-mobile.jpg)
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+
+      img:nth-child(3) { // Segunda imagen (image-3-mobile.jpg)
+        grid-column: 1 / 2;
+        grid-row: 2 / span 3;
+      }
+
+      img:nth-child(4) { // Tercera imagen (image-4-mobile.jpg)
+        grid-column: 2 / 3;
+        grid-row: 2 / 3; // Ocupa dos filas
+      }
+    }
   }
 }
-
-
