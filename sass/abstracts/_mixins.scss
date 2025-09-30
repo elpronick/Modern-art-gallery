@@ -1,6 +1,21 @@
 @use '../abstracts/variables' as *;
 @use 'sass:color';
 
+@mixin breakpoint($bp) {
+  @if $bp == tablet {
+    @media (min-width: $bp-tablet) { @content; }
+  }
+  @if $bp == tablet-horizontal { 
+    @media (min-width: $bp-tablet_horizontal) { @content; }
+  }
+  @if $bp == desktop {
+    @media (min-width: $bp-desktop) { @content; }
+  }
+  @if $bp == desktop-xl { 
+    @media (min-width: $bp-desktop_xl) { @content; }
+  }
+}
+
 // MIXINS--------------------
 @mixin button(
   $bg-left: $almost-black,
@@ -33,7 +48,8 @@
     width: 22%; 
     height: 100%;
     background-color: $bg-right;
-    z-index: -1; 
+    z-index: -1;
+    transition: background-color 0.3s ease;
   }
 
   &:after {
@@ -41,7 +57,7 @@
     margin-left: 15px;
     width: 24px;
     height: 20px;
-    background: url(/img/arrow.svg) no-repeat right;
+    background: url('/img/arrow.svg') no-repeat right;
     background-size: contain;
     display: inline-block;
     vertical-align: middle;
@@ -57,6 +73,6 @@
 
   // Eliminar estilos predeterminados del navegador
   &:focus {
-    outline: none;
+    outline: 2px solid $gold;
   }
 }
