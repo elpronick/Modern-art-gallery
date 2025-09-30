@@ -65,9 +65,9 @@
 
   // Hover effect
   &:hover {
-    background-color: darken($bg-left, 10%); // Solo cambia el fondo izquierdo
+    background-color: color.adjust($bg-left, $lightness: -10%); // Reemplaza darken
     &:before {
-      background-color: darken($bg-right, 10%); // Cambia el fondo derecho
+      background-color: color.adjust($bg-right, $lightness: -10%); // Reemplaza darken
     }
   }
 
