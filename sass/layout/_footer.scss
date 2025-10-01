@@ -1,11 +1,10 @@
 @use '../abstracts/index' as abs;
 @use 'sass:color';
 
-
 .footer {
   color: #fff;
   position: relative;
-  margin-top: 60px;
+  margin-top: 90px;
 
   &:before {
     content: '';
@@ -24,14 +23,11 @@
   }
   
   &__logo {
-    padding: 35px 0 15px 25px;
     width: 100px;
   }
   
   &__img {
     display: flex;
-    padding: 0px 0 40px 25px;
     gap: 15px;
   }
 }
-

@@ -1,7 +1,7 @@
 .footer {
   color: #fff;
   position: relative;
-  margin-top: 60px;
+  margin-top: 90px;
 }
 .footer:before {
   content: "";
@@ -18,12 +18,10 @@
   color: #fff;
 }
 .footer__logo {
-  padding: 35px 0 15px 25px;
   width: 100px;
 }
 .footer__img {
   display: flex;
-  padding: 0px 0 40px 25px;
   gap: 15px;
 }
 
@@ -82,6 +80,9 @@ body {
     grid-template-rows: auto auto auto;
     gap: 10px;
     padding: 15px;
+    position: relative;
+    top: 0px;
+    left: 38px;
   }
   .hero__experience .hero__experience__text {
     grid-column: 1/2;
@@ -93,45 +94,79 @@ body {
   .hero__experience .hero__experience__text p {
     padding-right: 120px;
   }
-  .hero__experience img:nth-child(2) {
+  .hero__experience img:nth-child(1) {
     grid-column: 2/3;
     grid-row: 1/2;
-    width: 100%;
-    height: 100%;
+    width: 398px;
+    height: 400px;
     -o-object-fit: cover;
        object-fit: cover;
-    justify-self: start;
+    position: relative;
+    top: 0px;
+    right: 70px;
   }
   .hero__experience img:nth-child(3) {
     grid-column: 1/2;
     grid-row: 2/4;
-    width: 100%;
-    height: 100%;
+    width: 398px;
+    height: 700px;
     -o-object-fit: cover;
        object-fit: cover;
-    justify-self: end;
+    position: relative;
+    top: 0px;
+    right: 0px;
   }
   .hero__experience img:nth-child(4) {
     grid-column: 2/3;
     grid-row: 2/3;
-    width: 100%;
-    height: 100%;
+    width: 280px;
+    height: 313px;
     -o-object-fit: cover;
        object-fit: cover;
+    position: relative;
+    top: 0px;
+    right: 0px;
   }
   .hero__experience .callout {
     grid-column: 2/3;
     grid-row: 3/4;
-    width: 100%;
-    height: 100%;
+    width: 280px;
+    height: 376px;
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+  .hero__experience .callout__title {
+    margin: 0;
+    padding: 65px 40px 0 20px;
   }
   .hero__experience .callout__text {
     margin: 0;
-    padding: 25px 30px 0 20px;
+    padding: 25px 40px 0 20px;
   }
-  .hero__experience .callout__title {
-    padding: 55px 30px 0 20px;
+  .footer {
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer img {
+    padding: 0;
+  }
+  .footer p {
     margin: 0;
+    padding: 0px 160px 20px 35px;
+  }
+  .footer__img {
+    padding-right: 40px;
+    position: relative;
+    top: -30px;
+    right: 0px;
+  }
+  .footer__logo {
+    position: relative;
+    top: -30px;
+    right: 28px;
   }
 }
 .button {
@@ -186,7 +221,7 @@ body {
   color: #fff;
 }
 .callout h2 {
-  padding: 25px 30px 0 20px;
+  padding: 25px 0 0 20px;
   font-family: "Big Shoulders Display Black", sans-serif;
   font-weight: 700;
   letter-spacing: -0.07em;
@@ -194,7 +229,7 @@ body {
   text-transform: uppercase;
 }
 .callout p {
-  padding: 0px 30px 40px 20px;
+  padding: 0 0 40px 20px;
   color: #fff;
 }
 .callout__background {
