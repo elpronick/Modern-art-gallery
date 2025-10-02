@@ -1,6 +1,7 @@
 @use '../abstracts/index' as abs;
 @use 'sass:color';
 
+// Versión móvil (visible por defecto, oculto en tablet)
 .callout-2 {
   margin-bottom: 30px;
   position: relative; 
@@ -44,48 +45,65 @@
   }
 
   &__text {
-    padding: 0px 30px 40px 20px;
+    padding: 0px 30px 40px 0;
     color: #fff;
   }
 }
 
-.footer-2 {
-  position: relative; 
-  
+// Versión tablet (oculta por defecto, visible en tablet)
+.callout-2__tablet {
+  display: none; // Oculta por defecto en móvil
+  margin-bottom: 30px;
+  position: relative;
+  color: #fff;
+
   &:before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -85px;
     left: -10px;
     width: 120%;
-    height: 110%;
-    background-color: abs.$gold;
+    height: 150%;
+    background-color: abs.$almost-black;
     z-index: -1; 
   }
-  
-  p {
-    padding: 0px 30px 20px 25px;
-    color: abs.$almost-black;
+
+  &__title {
+    padding: 0px 30px 0 40px;
+    font-family: abs.$secondary-font;
+    font-weight: 700;
+    letter-spacing: -0.07em;
+    font-size: 2.2em;
+    text-transform: uppercase;
+  }
+
+  &__title-2 {
+    font-family: abs.$secondary-font;
+    font-weight: 700;
+    letter-spacing: -0.07em;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    color: abs.$gold;
   }
   
-  &__logo {
-    padding: 35px 0 15px 25px;
-    width: 100px;
-    filter: brightness(0);
+  &__table {
+    padding: 0px 70px 30px 60px;
+    p {
+      color: #fff;
+    }
   }
-  
-  &__img {
-    display: flex;
-    padding: 0px 0 40px 25px;
-    gap: 15px;
-    filter: brightness(0);
+
+  &__text {
+    padding: 0px 70px 30px 0;
+    color: #fff;
   }
 }
+
 
 .map-container {
   max-width: 100%;
   overflow: hidden;
-
+  
   iframe {
     display: block;
     width: 100%;
@@ -101,4 +119,121 @@
   left: -10px;
   width: 100%;
   height: 100%;
+}
+
+.footer-2 {
+  display: flex; // Flex por defecto en móvil
+  flex-direction: column; // Alineación vertical en móvil
+  align-items: start; // Centra horizontalmente los elementos en la columna
+  position: relative; 
+  padding: 40px 100px 20px 25px;
+  
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 120%;
+    height: 110%;
+    background-color: abs.$gold;
+    z-index: -1; 
+  }
+  
+  p {
+    margin-bottom: 35px;
+    color: abs.$almost-black;
+    text-align: start; // Centra el texto en móvil
+  }
+  
+  &__logo {
+    padding: 10px 0 15px 0;
+    width: 100px;
+    filter: brightness(0);
+  }
+  
+  &__img {
+    display: flex;
+    padding: 0px 0 40px 0;
+    gap: 15px;
+    filter: brightness(0);
+    justify-content: center; // Centra los íconos horizontalmente
+  }
+}
+
+// Reglas para tablet
+@include abs.breakpoint(tablet) {
+  // Oculta la versión móvil en tablet
+  .callout-2 {
+    display: none;
+  }
+
+  // Muestra la versión tablet en tablet
+  .callout-2__tablet {
+    display: flex;
+  }
+
+  .back-button {
+    position: relative;
+    top: -540px;
+    left: 30px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .map-container {
+    max-width: 100%;
+    overflow: hidden;
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: 600px;
+      margin-top: -100px;
+      padding-bottom: 30px;
+      border: none;
+    }
+  }
+
+  .footer-2 {
+    display: flex;
+    flex-direction: row; // Alineación horizontal
+    align-items: center; // Centra verticalmente los elementos
+    justify-content: space-between; // Distribuye el espacio entre los elementos
+    position: relative; 
+    padding: 60px 15px; // Reduce padding para mejor ajuste
+    
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -10px;
+      width: 120%;
+      height: 110%;
+      background-color: abs.$gold;
+      z-index: -1;
+    }
+    
+    p {
+      text-align: justify;
+      padding: 0 85px 0 30px; // Elimina padding para que flex lo controle
+      color: abs.$almost-black;
+      flex: 1; // Permite que el párrafo ocupe el espacio disponible
+      margin: 0 10px; // Espaciado lateral
+    }
+    
+    &__logo {
+      padding: 0; // Elimina padding para flex
+      width: 100px;
+      filter: brightness(0);
+      margin: 0 10px; // Espaciado lateral
+    }
+    
+    &__img {
+      display: flex;
+      padding: 0;
+      gap: 15px; // Espacio entre íconos
+      filter: brightness(0);
+      margin: 0 10px; // Espaciado lateral
+    }
+  }
 }
