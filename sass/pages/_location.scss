@@ -237,3 +237,45 @@
     }
   }
 }
+
+// Reglas para desktop
+@include abs.breakpoint(desktop) {
+  .map-container {
+    iframe {
+      height: 700px; // Aumenta la altura del mapa para pantallas grandes
+      margin-top: -150px; // Ajusta el margen superior
+    }
+  }
+
+  .callout-2__tablet {
+    &__title {
+      padding: 0px 50px 0 60px; // Más padding para pantallas grandes
+    }
+
+    &__table {
+      padding: 0px 100px 30px 90px; // Más espacio interno
+    }
+
+    &__text {
+      padding: 0px 100px 30px 90px; // Más espacio interno
+    }
+  }
+
+  .footer-2 {
+    padding: 80px 50px; // Más padding para un diseño espaciado
+    justify-content: space-around; // Distribuye el espacio de forma más uniforme
+
+    p {
+      padding: 0 50px; // Más espacio alrededor del texto
+      font-size: 1.1em; // Aumenta ligeramente el tamaño del texto
+    }
+
+    &__logo {
+      width: 120px; // Aumenta el tamaño del logo
+    }
+
+    &__img {
+      gap: 20px; // Más espacio entre íconos
+    }
+  }
+}

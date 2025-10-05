@@ -1,6 +1,7 @@
 @use '../abstracts/index' as abs;
 @use 'sass:color';
 
+// ============ DEFAULT ================
 .hero {
   position: relative; // Asegura que el contenedor maneje el fondo
   
@@ -161,6 +162,111 @@
       position: relative;
       top: -30px;
       right: 28px;
+    }
+  }
+}
+
+// ============ DESKTOP ================
+@include abs.breakpoint(desktop) {
+  .hero {
+    &__content {
+      padding: 100px 120px 0px 60%; 
+      background-size: auto 800px; 
+      min-height: 620px; 
+      background-position: 340px top;
+      background-size: auto 650px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 340px;
+        height: 650px;
+        background-color: abs.$almost-black;
+        z-index: -1;
+      }
+
+      &__title {
+        color: #fff;
+        font-size: 50px;
+        position: relative;
+        top: 0px;
+        right: 600px;
+      }
+
+      &__text {
+        text-align: start;
+        padding-right: 90px;
+        position: relative;
+        top: -130px;
+        right: 0px;
+      }
+
+      .button {
+        position: relative;
+        top: -130px;
+        right: 0px;
+      }
+    }
+
+    &__experience {
+      padding: 30px; 
+      gap: 20px; 
+
+      .hero__experience__text {
+        h2 {
+          font-size: 40px;
+          padding-right: 250px; 
+        }
+        p {
+          padding-right: 280px; 
+        }
+      }
+
+      img:nth-child(1) {
+        width: 548px;
+        height: 400px;
+        object-fit: cover; 
+        position: relative;
+        top: 0px;
+        right: 70px;
+      }
+
+      img:nth-child(3) {
+        width: 558px;
+        height: 700px;
+        object-fit: cover; 
+        position: relative;
+        top: 0px;
+        right: 0px;
+      }
+
+      img:nth-child(4) {
+        width: 480px; 
+        height: 313px; 
+        object-fit: cover;
+        position: relative;
+        top: 0px;
+        right: 0px;
+      }
+
+      .callout {
+        width: 480px;
+        height: 365px;
+        position: relative;
+        top: 1px;
+        right: 0px;
+
+
+        &__title {
+          padding: 50px 170px 0 40px; 
+          font-size: 40px;
+        }
+        &__text {
+          padding: 15px 170px 0 40px; 
+        }
+      }
     }
   }
 }

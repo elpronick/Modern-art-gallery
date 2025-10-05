@@ -169,6 +169,96 @@ body {
     right: 28px;
   }
 }
+@media (min-width: 1200px) {
+  .hero__content {
+    padding: 100px 120px 0px 60%;
+    background-size: auto 800px;
+    min-height: 620px;
+    background-position: 340px top;
+    background-size: auto 650px;
+  }
+  .hero__content:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 340px;
+    height: 650px;
+    background-color: #151515;
+    z-index: -1;
+  }
+  .hero__content__title {
+    color: #fff;
+    font-size: 50px;
+    position: relative;
+    top: 0px;
+    right: 600px;
+  }
+  .hero__content__text {
+    text-align: start;
+    padding-right: 90px;
+    position: relative;
+    top: -130px;
+    right: 0px;
+  }
+  .hero__content .button {
+    position: relative;
+    top: -130px;
+    right: 0px;
+  }
+  .hero__experience {
+    padding: 30px;
+    gap: 20px;
+  }
+  .hero__experience .hero__experience__text h2 {
+    font-size: 40px;
+    padding-right: 250px;
+  }
+  .hero__experience .hero__experience__text p {
+    padding-right: 280px;
+  }
+  .hero__experience img:nth-child(1) {
+    width: 548px;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: relative;
+    top: 0px;
+    right: 70px;
+  }
+  .hero__experience img:nth-child(3) {
+    width: 558px;
+    height: 700px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+  .hero__experience img:nth-child(4) {
+    width: 480px;
+    height: 313px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: relative;
+    top: 0px;
+    right: 0px;
+  }
+  .hero__experience .callout {
+    width: 480px;
+    height: 365px;
+    position: relative;
+    top: 1px;
+    right: 0px;
+  }
+  .hero__experience .callout__title {
+    padding: 50px 170px 0 40px;
+    font-size: 40px;
+  }
+  .hero__experience .callout__text {
+    padding: 15px 170px 0 40px;
+  }
+}
 .button {
   display: inline-block;
   position: relative;
@@ -450,6 +540,35 @@ body {
     gap: 15px;
     filter: brightness(0);
     margin: 0 10px;
+  }
+}
+@media (min-width: 1200px) {
+  .map-container iframe {
+    height: 700px;
+    margin-top: -150px;
+  }
+  .callout-2__tablet__title {
+    padding: 0px 50px 0 60px;
+  }
+  .callout-2__tablet__table {
+    padding: 0px 100px 30px 90px;
+  }
+  .callout-2__tablet__text {
+    padding: 0px 100px 30px 90px;
+  }
+  .footer-2 {
+    padding: 80px 50px;
+    justify-content: space-around;
+  }
+  .footer-2 p {
+    padding: 0 50px;
+    font-size: 1.1em;
+  }
+  .footer-2__logo {
+    width: 120px;
+  }
+  .footer-2__img {
+    gap: 20px;
   }
 }
 html * {
