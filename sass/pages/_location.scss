@@ -127,6 +127,7 @@
   align-items: start; // Centra horizontalmente los elementos en la columna
   position: relative; 
   padding: 40px 100px 20px 25px;
+  gap: 100px;
   
   &:before {
     content: '';
@@ -248,8 +249,11 @@
   }
 
   .callout-2__tablet {
+    gap: 150px;
+
     &__title {
-      padding: 0px 50px 0 60px; // Más padding para pantallas grandes
+      font-size: 40px;
+      padding: 0px 50px 0 150px; // Más padding para pantallas grandes
     }
 
     &__table {
@@ -257,14 +261,14 @@
     }
 
     &__text {
-      padding: 0px 100px 30px 90px; // Más espacio interno
+      padding: 0px 100px 30px 0px; // Más espacio interno
     }
   }
 
   .footer-2 {
-    padding: 80px 50px; // Más padding para un diseño espaciado
+    padding: 80px 50px;// Más padding para un diseño espaciado
     justify-content: space-around; // Distribuye el espacio de forma más uniforme
-
+    
     p {
       padding: 0 50px; // Más espacio alrededor del texto
       font-size: 1.1em; // Aumenta ligeramente el tamaño del texto
@@ -277,5 +281,11 @@
     &__img {
       gap: 20px; // Más espacio entre íconos
     }
+  }
+
+  .back-button {
+    position: relative;
+    top: -590px;
+    left: 100px;
   }
 }

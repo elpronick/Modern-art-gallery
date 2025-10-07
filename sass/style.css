@@ -448,6 +448,7 @@ body {
   align-items: start;
   position: relative;
   padding: 40px 100px 20px 25px;
+  gap: 100px;
 }
 .footer-2:before {
   content: "";
@@ -547,14 +548,18 @@ body {
     height: 700px;
     margin-top: -150px;
   }
+  .callout-2__tablet {
+    gap: 150px;
+  }
   .callout-2__tablet__title {
-    padding: 0px 50px 0 60px;
+    font-size: 40px;
+    padding: 0px 50px 0 150px;
   }
   .callout-2__tablet__table {
     padding: 0px 100px 30px 90px;
   }
   .callout-2__tablet__text {
-    padding: 0px 100px 30px 90px;
+    padding: 0px 100px 30px 0px;
   }
   .footer-2 {
     padding: 80px 50px;
@@ -569,6 +574,11 @@ body {
   }
   .footer-2__img {
     gap: 20px;
+  }
+  .back-button {
+    position: relative;
+    top: -590px;
+    left: 100px;
   }
 }
 html * {
