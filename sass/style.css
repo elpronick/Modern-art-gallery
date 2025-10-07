@@ -306,6 +306,57 @@ body {
   outline: 2px solid #D5966C;
 }
 
+.button-2 {
+  display: inline-block;
+  position: relative;
+  padding: 18px 0;
+  font-family: "Big Shoulders Display Black", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+  padding-left: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #151515;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+.button-2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40px;
+  width: 26%;
+  height: 100%;
+  background-color: #D5966C;
+  z-index: -1;
+  transition: background-color 0.3s ease;
+}
+.button-2:after {
+  content: "";
+  margin-left: 15px;
+  width: 24px;
+  height: 20px;
+  background: url("/img/arrow.svg") no-repeat right;
+  transform: scaleX(-1);
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  left: -185px;
+}
+.button-2:hover {
+  background-color: hsl(0, 0%, -1.7647058824%);
+}
+.button-2:hover:before {
+  background-color: rgb(201.6666666667, 121.6666666667, 68.3333333333);
+}
+.button-2:focus {
+  outline: 2px solid #D5966C;
+}
+
 .callout {
   background-color: #151515;
   color: #fff;

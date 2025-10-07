@@ -76,3 +76,66 @@
     outline: 2px solid $gold;
   }
 }
+@mixin button-2(
+  $bg-left: $almost-black,
+  $bg-right: $gold,
+  $text-color: #fff,
+  $padding-y: 18px,
+  $padding-x: 0,
+  $font-size: 16px
+) {
+  display: inline-block;
+  position: relative;
+  padding: $padding-y $padding-x;
+  font-family: $secondary-font;
+  font-size: $font-size;
+  font-weight: 400;
+  color: $text-color;
+  padding-left: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: $bg-left; 
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 26%; 
+    height: 100%;
+    background-color: $bg-right;
+    z-index: -1;
+    transition: background-color 0.3s ease;
+  }
+
+  &:after {
+    content: '';
+    margin-left: 15px;
+    width: 24px;
+    height: 20px;
+    background: url('/img/arrow.svg') no-repeat right;
+    transform: scaleX(-1);
+    background-size: contain;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    left: -185px;
+  }
+
+  // Hover effect
+  &:hover {
+    background-color: color.adjust($bg-left, $lightness: -10%); // Reemplaza darken
+    &:before {
+      background-color: color.adjust($bg-right, $lightness: -10%); // Reemplaza darken
+    }
+  }
+
+  // Eliminar estilos predeterminados del navegador
+  &:focus {
+    outline: 2px solid $gold;
+  }
+}
