@@ -488,7 +488,7 @@ body {
 .back-button {
   position: relative;
   top: -510px;
-  left: -10px;
+  left: 30px;
   width: 100%;
   height: 100%;
 }
@@ -539,7 +539,7 @@ body {
   .back-button {
     position: relative;
     top: -540px;
-    left: 30px;
+    left: 80px;
     width: 100%;
     height: 100%;
   }
