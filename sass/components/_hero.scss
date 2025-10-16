@@ -51,7 +51,7 @@
   .hero {
     &__content {
       padding: 80px 30px 0px 50%; 
-      background-image: url('/img/image-1.jpg'); 
+      background-image: url('../img/image-1.jpg'); 
       background-size: auto 650px; 
       background-position: -20px top; 
       background-repeat: no-repeat;
@@ -176,10 +176,10 @@
 @include abs.breakpoint(desktop) {
   .hero {
     &__content { 
-      background-size: auto 800px; 
-      min-height: 620px; 
-      background-position: 340px top;
+      background-image: url('../img/image-1.jpg');
       background-size: auto 650px;
+      background-position: 340px top;
+      min-height: 620px; 
       margin-bottom: 50px;
 
       &:before {
